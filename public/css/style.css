@@ -1,0 +1,86 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+main {
+  text-align: center;
+  padding: 20px 150px;
+}
+.title {
+  color: #cdeb3b;
+}
+.fas {
+  color: #cdeb3b;
+}
+form {
+  display: flex;
+  justify-content: space-evenly;
+}
+.exchange {
+  margin-top: 50px;
+}
+input {
+  padding: 10px 5px;
+  border-radius: 30px;
+  border: 1px solid #cdeb3b;
+  transition-duration: 0.5s;
+}
+input:hover {
+  box-shadow: 8px 8px 25px rgb(209, 209, 209);
+}
+.exchange-btn {
+  padding: 8px 15px;
+  border-radius: 30px;
+  border: 1px solid #cdeb3b;
+  transition-duration: 0.5s;
+}
+.exchange-btn:hover {
+  box-shadow: 8px 8px 25px rgb(209, 209, 209);
+}
+label {
+  color: #546308;
+}
+/* ANSWER */
+.answer {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 30px;
+  padding: 30px 50px;
+  margin: 50px 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .answer {
+    margin: 50px 250px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    padding: 10px;
+  }
+  .answer {
+    margin: 0;
+    padding: 1px;
+    display: block;
+    text-align: center;
+  }
+  .exchange {
+    margin: 10px 0 20px;
+  }
+  .date {
+    line-height: 1;
+  }
+  form {
+    display: grid;
+    gap: 5px;
+  }
+  .fas {
+    font-size: 2.5rem;
+  }
+  .exchange-btn {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}

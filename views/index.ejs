@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/670bda65ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <i class="fas fa-dollar-sign fa-7x"></i>
+      <h1 class="title">Exchange Rate Calculator</h1>
+      <div class="exchange">
+        <form action="/" method="post">
+          <div class="amount">
+            <label for="">Amount</label>
+            <input type="text" name="Amount" placeholder="0" />
+          </div>
+          <div class="from">
+            <label for="">From</label>
+            <input type="text" name="From" placeholder="EUR" />
+          </div>
+          <div class="to">
+            <label for="">To</label>
+            <input type="text" name="To" placeholder="NGN" />
+          </div>
+          <button class="exchange-btn">Convert</button>
+        </form>
+      </div>
+    </main>
+    <% if (typeof success != "undefined" && success) { %>
+    <div class="answer">
+      <div class="date">
+        <h1 class="rate-title">Date</h1>
+        <p><%= Date %></p>
+      </div>
+      <div class="rate">
+        <h1 class="rate-title">Rate</h1>
+        <p><%= Rate %></p>
+      </div>
+      <div class="result">
+        <h1 class="rate-title">Result</h1>
+        <p><%= Symbol %> <span><%= Math.round(Result) %></span></p>
+      </div>
+    </div>
+    <% } else if(typeof success != "undefined" && !success) { %>
+    <div class="answer">
+      <h2><%= Message %></h2>
+    </div>
+    <% } %>
+  </body>
+</html>
